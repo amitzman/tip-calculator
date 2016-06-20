@@ -1,0 +1,41 @@
+html(lang='en')
+
+  head
+    title The Best Calculator
+    link(href='/style.css', rel='stylesheet')
+    script(type='text/javascript' src='money.js')
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js")
+  body
+    h1 Tip Calculator
+
+    form(name='calc', action='/tip_calculator', method='post')
+      div
+        label Amount $
+        input(type='number', name='amount', value=amount)
+      div
+        label Tip
+        select(name='tipPercent', value=tipPercent)
+          option(value='.1') 10%
+          option(value='.15') 15%
+          option(value='.2') 20%
+          option(value='1.5') 150%
+      div
+        button(type='submit') Compute Tip
+      div
+      output Your tip: $#{tip}
+
+
+      #coin
+      .cover
+      #bill1.money
+        .pres
+      #bill2.money
+        .pres
+      #bill3.money
+        .pres
+      #bill4.money
+        .pres
+      #bill5.money
+        .pres
+      #bill6.money
+        .pres
